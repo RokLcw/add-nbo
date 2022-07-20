@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdint.h>
 
+/*to little endian*/
 uint32_t to_little (uint32_t n) {
 	uint32_t n1 = (n & 0xFF000000) >> 24;
 	uint32_t n2 = (n & 0x00FF0000) >> 8;
@@ -9,6 +10,7 @@ uint32_t to_little (uint32_t n) {
 	return n1 | n2 | n3 | n4;
 }
 
+/*calc sum*/
 uint32_t sum(uint32_t n1, uint32_t n2) {
 	return n1 + n2;
 }
